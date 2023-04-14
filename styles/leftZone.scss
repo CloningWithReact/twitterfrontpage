@@ -91,6 +91,58 @@ $hoverBackgroundColor: rgba(255, 255, 255, 0.1);
             background-color: darken($color: #4B99E9, $amount: 6%);
         }
     }
+
+    .menuUserBox {
+        transition: 0.25s all ease-in;
+        width: 110%;
+        padding: 10px 20px;
+        height: 60px;
+        border-radius: 30px;
+
+        .menuUserAvatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            float: left;
+        }
+
+        .menuUserInfoBox {
+            float: left;
+            width: calc(100% - 60px);
+            padding: 0px 20px;
+
+            .menuUserInfoName, .menuUserInfoUsername {
+                width: 100%;
+                margin: 0px;
+                white-space: nowrap;
+                font-weight: 500;
+                font-size: 16px;
+            }
+
+            .menuUserInfoUsername {
+                opacity: 0.4;
+                font-weight: 300;
+            }
+        }
+
+        .menuUserEllipsis {
+            width: 20px;
+            height: 40px;
+            border-radius: 20px;
+            float: left;
+            filter: invert(100%) sepia(6%) saturate(7417%) hue-rotate(282deg) brightness(111%) contrast(100%);
+        }
+
+        &::after {
+            content: "";
+            clear: both;
+        }
+
+        &:hover {
+            background-color: $hoverBackgroundColor;
+            cursor: pointer;
+        }
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -139,6 +191,14 @@ $hoverBackgroundColor: rgba(255, 255, 255, 0.1);
             }
 
             p {
+                display: none;
+            }
+        }
+
+        .menuUserBox {
+            padding-left: 10px;
+
+            .menuUserInfoBox, .menuUserEllipsis {
                 display: none;
             }
         }

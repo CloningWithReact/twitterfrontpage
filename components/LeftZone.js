@@ -28,6 +28,14 @@ export default function LeftZone() {
             <p>Tweet</p>
             <img className='menuTweetImage' src='/assets/menu-tweet-action.svg'/>
         </button>
+        <div className='menuUserBox'>
+            <img className='menuUserAvatar' src='/assets/default-avatar.png'/>
+            <div className='menuUserInfoBox'>
+                <p className='menuUserInfoName'>Juan Curti</p>
+                <p className='menuUserInfoUsername'>@juancurti</p>
+            </div>
+            <img className='menuUserEllipsis' src='/assets/options-icon.svg'/>
+        </div>
     </div>
   )
 }
