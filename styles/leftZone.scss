@@ -2,6 +2,7 @@ $hoverBackgroundColor: rgba(255, 255, 255, 0.1);
 
 .leftZone {
     padding: 20px 80px;
+    padding-right: 40px;
 
     .twitterLogoBox {
         transition: 0.25s all ease-in;
@@ -28,7 +29,7 @@ $hoverBackgroundColor: rgba(255, 255, 255, 0.1);
         margin: 10px 0px;
         
         .menuImageContainer {
-            height: 70px;
+            height: 60px;
             width: auto;
             padding: 10px;
             display: block;
@@ -64,11 +65,37 @@ $hoverBackgroundColor: rgba(255, 255, 255, 0.1);
         }
         
     }
+
+    .menuTweetButton {
+        background-color: #4B99E9;
+        border: 0px;
+        margin: 10px 0px;
+        color: white;
+        font-weight: 600;
+        width: 100%;
+        font-size: 18px;
+        padding: 20px 0px;
+        border-radius: 30px;
+        transition: 0.3s all ease-in;
+
+        p {
+            margin: 0px;
+        }
+
+        .menuTweetImage {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken($color: #4B99E9, $amount: 6%);
+        }
+    }
 }
 
 @media screen and (max-width: 760px) {
     .leftZone {
-        padding: 20px 40px;
+        padding: 20px 15px;
 
         .twitterLogoBox {
             margin-left: 0px;
@@ -95,6 +122,24 @@ $hoverBackgroundColor: rgba(255, 255, 255, 0.1);
             &:hover {
                 background-color: $hoverBackgroundColor;
                 cursor: pointer;
+            }
+        }
+
+        .menuTweetButton {
+            width: 55px;
+            height: 55px;
+            padding: 0px;
+            padding-left: 12.5px;
+
+            .menuTweetImage {
+                display: block;
+                height: 30px;
+                aspect-ratio: 1.0;
+                filter: invert(100%) sepia(6%) saturate(7417%) hue-rotate(282deg) brightness(111%) contrast(100%);
+            }
+
+            p {
+                display: none;
             }
         }
     }

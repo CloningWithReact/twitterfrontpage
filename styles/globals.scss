@@ -60,6 +60,14 @@ main {
 
 @media screen and (max-width: 760px) {
     main {
+        .leftZone {
+            width: 17%;
+        }
+
+        .centerZone {
+            width: 53%;
+        }
+
         .rightZone {
             display: none;
         }

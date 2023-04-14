@@ -24,6 +24,10 @@ export default function LeftZone() {
         {menuButton('/assets/menu-twitter-blue.svg', 'Twitter Blue')}
         {menuButton('/assets/menu-profile.svg', 'Profile')}
         {menuButton('/assets/menu-more.svg', 'More')}
+        <button className='menuTweetButton'>
+            <p>Tweet</p>
+            <img className='menuTweetImage' src='/assets/menu-tweet-action.svg'/>
+        </button>
     </div>
   )
 }
