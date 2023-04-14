@@ -27,3 +27,41 @@ body {
     font-family: 'TwitterChirp';
     color: white;
 }
+
+main {
+    width: 100%;
+    height: 100vh;
+
+    .leftZone {
+        width: 25%;
+        height: 100%;
+        float: left;
+        border-right: 1px solid #2F3336;
+    }
+
+    .centerZone {
+        width: 45%;
+        height: 100%;
+        float: left;
+    }
+
+    .rightZone {
+        width: 30%;
+        height: 100%;
+        float: left;
+        border-left: 1px solid #2F3336;
+    }
+    
+    &::after {
+        content: "";
+        clear: both;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    main {
+        .rightZone {
+            display: none;
+        }
+    }
+}

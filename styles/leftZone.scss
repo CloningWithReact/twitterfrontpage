@@ -1,0 +1,27 @@
+.leftZone {
+    padding: 20px 80px;
+
+    .twitterLogoBox {
+        transition: 0.25s all ease-in;
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        border-radius: 25px;
+
+        .twitterLogo {
+            width: 30px;
+            height: 30px;
+            filter: invert(100%) sepia(6%) saturate(7417%) hue-rotate(282deg) brightness(111%) contrast(100%);
+        }
+
+        &:hover {
+            background-color: rgba(255, 243, 243, 0.199);
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .leftZone {
+        padding: 20px 40px;
+    }
+}

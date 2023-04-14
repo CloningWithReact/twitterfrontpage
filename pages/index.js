@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import CenterZone from '../components/CenterZone'
+import LeftZone from '../components/LeftZone'
+import RightZone from '../components/RightZone'
 
 export default function Home() {
   return (
@@ -9,7 +12,9 @@ export default function Home() {
       </Head>
 
       <main>
-        
+        <LeftZone />
+        <CenterZone />
+        <RightZone />
       </main>
     </div>
   )
