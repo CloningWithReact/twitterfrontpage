@@ -1,3 +1,5 @@
+$hoverBackgroundColor: rgba(255, 255, 255, 0.1);
+
 .leftZone {
     padding: 20px 80px;
 
@@ -7,6 +9,7 @@
         height: 50px;
         padding: 10px;
         border-radius: 25px;
+        margin-left: 10px;
 
         .twitterLogo {
             width: 30px;
@@ -15,13 +18,84 @@
         }
 
         &:hover {
-            background-color: rgba(255, 243, 243, 0.199);
+            cursor: pointer;
+            background-color: $hoverBackgroundColor;
         }
+    }
+
+    .menuButtonBox {
+        height: 50px;
+        margin: 10px 0px;
+        
+        .menuImageContainer {
+            height: 70px;
+            width: auto;
+            padding: 10px;
+            display: block;
+
+            img {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                margin-left: 10px;
+                margin-top: 7.5px;
+                filter: invert(100%) sepia(6%) saturate(7417%) hue-rotate(282deg) brightness(111%) contrast(100%);
+            }
+
+            .menuTitle {
+                margin-top: -5px;
+                font-size: 20px;
+                font-weight: 300;
+                width: fit-content;
+                padding-left: 60px;
+                padding-right: 30px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                transition: 0.25s all ease-in;
+                border-radius: 25px;
+                white-space: nowrap;
+
+                &:hover {
+                    background-color: $hoverBackgroundColor;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+        
     }
 }
 
 @media screen and (max-width: 760px) {
     .leftZone {
         padding: 20px 40px;
+
+        .twitterLogoBox {
+            margin-left: 0px;
+        }
+
+        .menuButtonBox {
+            transition: 0.25s all ease-in;
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+
+            .menuImageContainer {
+                img {
+                    margin-left: 2.5px;
+                    margin-top: 2.5px;
+                    width: 25px;
+                    height: 25px;
+                }
+
+                .menuTitle {
+                    display: none;
+                }
+            }
+            &:hover {
+                background-color: $hoverBackgroundColor;
+                cursor: pointer;
+            }
+        }
     }
 }
